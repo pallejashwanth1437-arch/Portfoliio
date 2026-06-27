@@ -14,15 +14,11 @@ html, body, #root {
   width: 100%;
 }
 
-#root {
-  background-image: url('/hero-bg.png');
-  background-size: 100% auto;
-  background-position: top center;
-  background-repeat: repeat-y;
-}
-
 .bg-waves {
-  background: transparent;
+  background-image: url('/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-heading {

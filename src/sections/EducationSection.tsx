@@ -38,7 +38,7 @@ export const EducationSection: React.FC = () => {
   return (
     <section
       id="education"
-      className="min-h-screen w-full bg-waves text-[#D7E2EA] px-5 sm:px-8 md:px-10 py-20 relative z-20 flex flex-col items-center justify-center border-t border-white/5"
+      className="min-h-screen w-full bg-waves text-[#D7E2EA] px-5 sm:px-8 md:px-10 py-20 relative z-20 flex flex-col items-center justify-center"
     >
       <div className="max-w-4xl w-full flex flex-col gap-16">
         

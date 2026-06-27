@@ -72,7 +72,7 @@ const certificationsData: CertificationItem[] = [
 
 export const CertificationsSection: React.FC = () => {
   return (
-    <section id="certifications" className="min-h-screen w-full bg-waves flex flex-col items-center justify-center py-20 px-5 sm:px-8 md:px-10 border-t border-white/5 relative z-30">
+    <section id="certifications" className="min-h-screen w-full bg-waves flex flex-col items-center justify-center py-20 px-5 sm:px-8 md:px-10 relative z-30">
       <div className="max-w-6xl mx-auto w-full flex flex-col gap-16">
         
         {/* Section Title */}
