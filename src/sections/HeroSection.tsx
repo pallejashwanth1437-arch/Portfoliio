@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onContactClick }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-center overflow-x-clip relative bg-waves py-12 md:py-20 px-10 sm:px-16 md:px-20 lg:px-28">
+    <section className="min-h-screen w-full flex flex-col justify-center overflow-x-clip relative bg-waves py-16 md:py-20 px-5 sm:px-10 md:px-16 lg:px-24">
       {/* Cinematic Background Light Source / Orb */}
       <div className="absolute top-[45%] left-[50%] md:left-[70%] -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[450px] md:w-[600px] h-[250px] sm:h-[450px] md:h-[600px] bg-gradient-to-tr from-indigo-600/10 to-purple-500/5 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none z-0" />
 
@@ -17,10 +17,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onCon
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 items-center z-10">
         
         {/* Left Column: Text & CTA Buttons (7 cols on desktop) */}
-        <div className="col-span-1 md:col-span-7 flex flex-col items-start text-left gap-6 md:gap-8 order-2 md:order-1" style={{ paddingLeft: 'clamp(2rem, 8vw, 8rem)' }}>
+        <div className="col-span-1 md:col-span-7 flex flex-col items-start text-left gap-5 md:gap-8 order-2 md:order-1">
           
           {/* Availability & Tech Focus Top Badges */}
-          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <div className="flex flex-col gap-2 items-start">
             {/* Availability Badge */}
             <FadeIn delay={0.1} y={20}>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider font-mono">
@@ -49,10 +49,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onCon
             </FadeIn>
             
             <FadeIn delay={0.25} y={30}>
-              <h1 className="hero-heading font-black uppercase tracking-tight leading-[1.05] flex flex-col gap-1 sm:gap-2">
-                <span className="text-[2.2rem] sm:text-[3.2rem] md:text-[3rem] lg:text-[4.2rem]">Full Stack Developer</span>
-                <span className="text-white/95 text-[2.2rem] sm:text-[3.2rem] md:text-[3rem] lg:text-[4.2rem]">AI Engineer</span>
-                <span className="text-indigo-400/90 text-sm sm:text-base md:text-lg tracking-[0.2em] font-mono font-bold mt-1.5 uppercase">
+              <h1 className="hero-heading font-black uppercase tracking-tight leading-[1.05] flex flex-col gap-1">
+                <span style={{ fontSize: 'clamp(1.8rem, 7vw, 4.2rem)' }}>Full Stack Developer</span>
+                <span className="text-white/95" style={{ fontSize: 'clamp(1.8rem, 7vw, 4.2rem)' }}>AI Engineer</span>
+                <span className="text-indigo-400/90 tracking-[0.15em] font-mono font-bold mt-1 uppercase" style={{ fontSize: 'clamp(0.7rem, 2.5vw, 1.1rem)' }}>
                   Cyber Security Student
                 </span>
               </h1>
@@ -68,7 +68,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onCon
 
           {/* Action Buttons Group */}
           <FadeIn delay={0.45} y={20} className="w-full">
-            <div className="flex flex-wrap gap-3.5 w-full">
+            <div className="flex flex-wrap gap-2.5 w-full">
               {/* Resume Button */}
               <a
                 href="/resume.pdf"
@@ -128,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onCon
 
         {/* Right Column: 3D floating Portrait (5 cols on desktop) */}
         <div className="col-span-1 md:col-span-5 flex justify-center items-center order-1 md:order-2">
-          <FadeIn delay={0.4} y={30} className="w-[260px] sm:w-[320px] md:w-full max-w-[460px]">
+          <FadeIn delay={0.4} y={30} className="w-[180px] sm:w-[260px] md:w-full max-w-[460px]">
             <Magnet
               padding={100}
               strength={4}

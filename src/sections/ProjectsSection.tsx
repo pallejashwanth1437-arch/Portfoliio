@@ -169,7 +169,7 @@ const ProjectCard: React.FC<CardProps> = ({
   return (
     <div
       ref={cardRef}
-      className="w-full h-[85vh] sm:h-[90vh] flex items-center justify-center sticky"
+      className="w-full h-auto md:h-[88vh] flex items-start md:items-center justify-center md:sticky"
       style={{
         // Offset by card index
         top: `calc(clamp(88px, 10vw, 110px) + ${index * 24}px)`,
@@ -181,10 +181,10 @@ const ProjectCard: React.FC<CardProps> = ({
           scale,
           willChange: 'transform',
         }}
-        className="w-full rounded-[30px] sm:rounded-[40px] md:rounded-[50px] border border-white/10 bg-[#0C0C0C] p-5 sm:p-7 md:p-9 flex flex-col md:flex-row gap-5 md:gap-8 h-[72vh] sm:h-[78vh] md:h-[82vh] shadow-[0_25px_60px_rgba(0,0,0,0.95)]"
+        className="w-full rounded-[24px] sm:rounded-[30px] md:rounded-[50px] border border-white/10 bg-[#0C0C0C] p-4 sm:p-6 md:p-9 flex flex-col md:flex-row gap-4 md:gap-8 h-auto md:h-[82vh] shadow-[0_25px_60px_rgba(0,0,0,0.95)]"
       >
         {/* Left Column - Project Info (Scrollable detailed overview) */}
-        <div className="flex flex-col justify-start w-full md:w-[48%] h-full text-left gap-4 overflow-y-auto pr-2 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/10">
+        <div className="flex flex-col justify-start w-full md:w-[48%] h-auto md:h-full text-left gap-4 md:overflow-y-auto pr-2 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/10">
 
           {/* Header block */}
           <div className="flex items-start gap-4 flex-shrink-0">

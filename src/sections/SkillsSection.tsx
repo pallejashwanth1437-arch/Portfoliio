@@ -175,7 +175,7 @@ export const SkillsSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 w-full items-stretch">
 
           {/* Left Category Selection Panel (4 cols on desktop) */}
-          <div className="lg:col-span-4 flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 gap-2.5 no-scrollbar flex-shrink-0">
+          <div className="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-2.5 flex-shrink-0">
             {skillsData.map((category) => {
               const isActive = activeTab === category.id;
               return (
@@ -183,8 +183,8 @@ export const SkillsSection: React.FC = () => {
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`
-                    flex items-center gap-3 px-5 py-3.5 rounded-2xl border text-left whitespace-nowrap lg:whitespace-normal
-                    transition-all duration-300 font-mono text-[11px] uppercase tracking-wider cursor-pointer select-none flex-shrink-0 lg:flex-shrink
+                    flex items-center gap-2 px-3 py-3 rounded-2xl border text-left
+                    transition-all duration-300 font-mono text-[10px] uppercase tracking-wider cursor-pointer select-none
                     ${isActive
                       ? 'bg-indigo-600/10 border-indigo-500/25 text-indigo-400 font-bold shadow-[inset_0_0_12px_rgba(99,102,241,0.08)] scale-[1.02]'
                       : 'bg-[#121214]/50 border-white/5 text-[#D7E2EA]/50 hover:bg-[#161619]/80 hover:text-white hover:border-white/10'
