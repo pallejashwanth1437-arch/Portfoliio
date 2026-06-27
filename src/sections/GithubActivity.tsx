@@ -1,17 +1,18 @@
 import React from 'react';
 import { FadeIn } from '../components/FadeIn';
 import { motion } from 'framer-motion';
-import { Github, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export const GithubActivity: React.FC = () => {
   return (
     <section id="github" className="w-full bg-[#0C0C0C] flex flex-col items-center justify-center py-20 px-5 sm:px-8 md:px-10 border-t border-white/5 relative z-30 overflow-hidden">
-      
+
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-indigo-500/[0.02] rounded-full blur-[100px] pointer-events-none z-0" />
 
       <div className="max-w-5xl mx-auto w-full flex flex-col gap-12 sm:gap-14 items-center relative z-10">
-        
+
         {/* Section Heading */}
         <div className="w-full text-center flex flex-col items-center gap-3">
           <FadeIn delay={0} y={30}>
@@ -31,7 +32,7 @@ export const GithubActivity: React.FC = () => {
 
         {/* Dashboard Layout: Stats & Languages on Top, Graph below */}
         <div className="flex flex-col gap-6 w-full">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full items-stretch">
             {/* Card 1: Dynamic Profile Stats */}
             <FadeIn delay={0.15} y={30} className="flex">
@@ -103,7 +104,7 @@ export const GithubActivity: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white hover:bg-[#F2F2F7] text-[#0C0C0C] font-bold py-3.5 px-7 text-xs sm:text-sm transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md font-sans border border-white/10"
           >
-            <Github className="w-4 h-4" />
+            <FaGithub className="w-4 h-4" />
             View GitHub Profile
             <ArrowUpRight className="w-4 h-4 text-black/50" />
           </a>

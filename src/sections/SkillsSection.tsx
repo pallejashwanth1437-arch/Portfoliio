@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { FadeIn } from '../components/FadeIn';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Database, Server, Lock, Monitor, Brain, Eye, 
-  Cloud, Play, Settings, TableProperties, Cpu, Github 
+import {
+  Database, Server, Lock, Monitor, Brain, Eye,
+  Cloud, Play, Settings, TableProperties, Cpu
 } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 
 interface TechItem {
   name: string;
@@ -104,7 +105,7 @@ const skillsData: SkillCategory[] = [
     glowColor: "rgba(251, 191, 36, 0.2)",
     items: [
       { name: "Git", logoUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", description: "Distributed Version Control" },
-      { name: "GitHub", icon: <Github className="w-5 h-5 text-amber-500" />, description: "Collaboration & Hosting" }
+      { name: "GitHub", icon: <FaGithub className="w-5 h-5 text-amber-500" />, description: "Collaboration & Hosting" }
     ]
   },
   {
@@ -135,8 +136,8 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 12, scale: 0.96 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     scale: 1,
     transition: { type: "spring" as const, stiffness: 400, damping: 25 }
@@ -149,15 +150,15 @@ export const SkillsSection: React.FC = () => {
 
   return (
     <section id="skills" className="min-h-screen w-full bg-[#0C0C0C] flex flex-col items-center justify-center py-20 px-5 sm:px-8 md:px-10 border-t border-white/5 relative z-30 overflow-hidden">
-      
+
       {/* Background radial glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-indigo-500/[0.03] rounded-full blur-[120px] pointer-events-none z-0" />
-      
+
       {/* Blueprint Grid Mesh overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0 opacity-40" />
 
       <div className="max-w-5xl mx-auto w-full flex flex-col gap-12 sm:gap-14 items-center relative z-10">
-        
+
         {/* Section Heading */}
         <div className="w-full text-center flex flex-col items-center gap-3">
           <FadeIn delay={0} y={30}>
@@ -172,7 +173,7 @@ export const SkillsSection: React.FC = () => {
 
         {/* Dashboard Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 w-full items-stretch">
-          
+
           {/* Left Category Selection Panel (4 cols on desktop) */}
           <div className="lg:col-span-4 flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0 gap-2.5 no-scrollbar flex-shrink-0">
             {skillsData.map((category) => {
@@ -200,10 +201,10 @@ export const SkillsSection: React.FC = () => {
           {/* Right Skills Grid Viewport (8 cols on desktop) */}
           <div className="lg:col-span-8 flex">
             <div className="w-full rounded-[28px] border border-white/5 bg-[#121214]/65 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-center min-h-[360px] relative overflow-hidden shadow-xl">
-              
+
               {/* Dynamic Glow background matching category color */}
-              <div 
-                className="absolute -right-20 -bottom-20 w-[250px] h-[250px] rounded-full blur-[90px] pointer-events-none transition-all duration-700" 
+              <div
+                className="absolute -right-20 -bottom-20 w-[250px] h-[250px] rounded-full blur-[90px] pointer-events-none transition-all duration-700"
                 style={{ backgroundColor: activeCategory.glowColor }}
               />
 
@@ -220,10 +221,10 @@ export const SkillsSection: React.FC = () => {
                     <motion.div
                       key={itemIdx}
                       variants={itemVariants}
-                      whileHover={{ 
-                        x: 6, 
+                      whileHover={{
+                        x: 6,
                         backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                        borderColor: 'rgba(255, 255, 255, 0.12)' 
+                        borderColor: 'rgba(255, 255, 255, 0.12)'
                       }}
                       className="flex items-center gap-4 p-3.5 rounded-xl border border-white/5 bg-[#161619]/40 backdrop-blur-md cursor-pointer select-none transition-all duration-200"
                     >
@@ -241,7 +242,7 @@ export const SkillsSection: React.FC = () => {
                           />
                         </div>
                       )}
-                      
+
                       <div className="flex flex-col text-left">
                         <span className="text-xs sm:text-sm font-bold text-[#D7E2EA] transition-colors duration-200">
                           {item.name}

@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FadeIn } from '../components/FadeIn';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 interface ProjectItem {
   number: string;
@@ -184,7 +185,7 @@ const ProjectCard: React.FC<CardProps> = ({
       >
         {/* Left Column - Project Info (Scrollable detailed overview) */}
         <div className="flex flex-col justify-start w-full md:w-[48%] h-full text-left gap-4 overflow-y-auto pr-2 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-white/10">
-          
+
           {/* Header block */}
           <div className="flex items-start gap-4 flex-shrink-0">
             <span className="font-black text-[#D7E2EA]/10 uppercase leading-none select-none text-[2.5rem] sm:text-[3.5rem] md:text-[4rem]">
@@ -213,14 +214,14 @@ const ProjectCard: React.FC<CardProps> = ({
                 Live Demo
               </a>
             )}
-            
+
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-1.5 rounded-2xl border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold py-2 px-4 text-xs transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-sm font-sans"
             >
-              <Github className="w-3.5 h-3.5" />
+              <FaGithub className="w-3.5 h-3.5" />
               GitHub Code
             </a>
           </div>
@@ -296,9 +297,9 @@ const ProjectCard: React.FC<CardProps> = ({
 
         {/* Right Column - Swipable Screenshot Gallery (52% width) */}
         <div className="w-full md:w-[52%] h-[200px] md:h-full flex-grow md:flex-grow-0 relative group">
-          
+
           {/* Scrollable container snap align */}
-          <div 
+          <div
             onScroll={handleCarouselScroll}
             className="w-full h-full flex overflow-x-auto gap-4 snap-x snap-mandatory scroll-smooth scrollbar-none rounded-2xl sm:rounded-3xl border border-white/10 bg-black/40"
           >
@@ -310,7 +311,7 @@ const ProjectCard: React.FC<CardProps> = ({
                   className="w-full h-full object-cover object-top select-none pointer-events-none rounded-2xl sm:rounded-3xl"
                   loading="lazy"
                 />
-                
+
                 {/* Overlay label denoting feature */}
                 <span className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md text-[10px] font-mono text-white/90 border border-white/5 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   {imgIdx === 0 ? "Main Feature" : imgIdx === 1 ? "Dashboard" : "Landing Page"}
