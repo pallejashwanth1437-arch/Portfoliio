@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onContactClick }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-center overflow-x-clip relative bg-waves py-12 md:py-20 px-6 sm:px-10 md:px-16 lg:px-24">
+    <section className="min-h-screen w-full flex flex-col justify-center overflow-x-clip relative bg-waves py-12 md:py-20 px-10 sm:px-16 md:px-20 lg:px-28">
       {/* Cinematic Background Light Source / Orb */}
       <div className="absolute top-[45%] left-[50%] md:left-[70%] -translate-x-1/2 -translate-y-1/2 w-[250px] sm:w-[450px] md:w-[600px] h-[250px] sm:h-[450px] md:h-[600px] bg-gradient-to-tr from-indigo-600/10 to-purple-500/5 rounded-full blur-[80px] sm:blur-[130px] pointer-events-none z-0" />
 
@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onCon
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 items-center z-10">
         
         {/* Left Column: Text & CTA Buttons (7 cols on desktop) */}
-        <div className="col-span-1 md:col-span-7 flex flex-col items-start text-left gap-6 md:gap-8 order-2 md:order-1 pl-8 sm:pl-12 md:pl-16 lg:pl-24">
+        <div className="col-span-1 md:col-span-7 flex flex-col items-start text-left gap-6 md:gap-8 order-2 md:order-1 pl-6 sm:pl-10 md:pl-14 lg:pl-20">
           
           {/* Availability & Tech Focus Top Badges */}
           <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
