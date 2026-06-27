@@ -8,10 +8,19 @@
 
 html, body, #root {
   background-color: #0C0C0C;
+  background-image: url('/hero-bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
   color: #D7E2EA;
   font-family: 'Kanit', sans-serif;
   min-height: 100vh;
   width: 100%;
+}
+
+.bg-waves {
+  background: transparent;
 }
 
 .hero-heading {
@@ -19,13 +28,6 @@ html, body, #root {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.bg-waves {
-  background-image: url('/hero-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Scrollbar Styles */
