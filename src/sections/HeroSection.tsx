@@ -17,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onProjectsClick, onCon
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6 items-center z-10">
         
         {/* Left Column: Text & CTA Buttons (7 cols on desktop) */}
-        <div className="col-span-1 md:col-span-7 flex flex-col items-start text-left gap-6 md:gap-8 order-2 md:order-1">
+        <div className="col-span-1 md:col-span-7 flex flex-col items-start text-left gap-6 md:gap-8 order-2 md:order-1 md:pl-12 lg:pl-20">
           
           {/* Availability & Tech Focus Top Badges */}
           <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
