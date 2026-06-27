@@ -149,7 +149,7 @@ export const SkillsSection: React.FC = () => {
   const activeCategory = skillsData.find(cat => cat.id === activeTab) || skillsData[0];
 
   return (
-    <section id="skills" className="min-h-screen w-full bg-[#0C0C0C] flex flex-col items-center justify-center py-20 px-5 sm:px-8 md:px-10 border-t border-white/5 relative z-30 overflow-hidden">
+    <section id="skills" className="min-h-screen w-full bg-waves flex flex-col items-center justify-center py-20 px-5 sm:px-8 md:px-10 border-t border-white/5 relative z-30 overflow-hidden">
 
       {/* Background radial glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-indigo-500/[0.03] rounded-full blur-[120px] pointer-events-none z-0" />

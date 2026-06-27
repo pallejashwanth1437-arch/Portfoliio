@@ -341,7 +341,7 @@ export const ProjectsSection: React.FC = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="bg-[#0C0C0C] text-[#D7E2EA] py-24 sm:py-28 md:py-32 relative z-30 overflow-visible flex flex-col items-center border-t border-white/5"
+      className="bg-waves text-[#D7E2EA] py-24 sm:py-28 md:py-32 relative z-30 overflow-visible flex flex-col items-center border-t border-white/5"
     >
 
       {/* Title */}

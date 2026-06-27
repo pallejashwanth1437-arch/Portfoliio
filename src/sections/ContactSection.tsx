@@ -24,7 +24,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-[#0C0C0C] text-[#D7E2EA] pt-20 pb-0 border-t border-white/5 relative z-30 flex flex-col items-center justify-start"
+      className="w-full bg-waves text-[#D7E2EA] pt-20 pb-0 border-t border-white/5 relative z-30 flex flex-col items-center justify-start"
     >
       {/* Background Radial Glow */}
       <div className="absolute -bottom-1/4 -right-1/4 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-indigo-500/[0.03] rounded-full blur-[120px] pointer-events-none z-0" />
